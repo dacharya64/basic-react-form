@@ -1,3 +1,3 @@
 # basic-react-form
+## The branches of this project are sorted in the order they were coded.
 
-[Watch the YouTube video to learn how it was made.](https://youtu.be/SX_IL7LqSxM)
