@@ -4,16 +4,18 @@ import RaisedButton from "material-ui/RaisedButton";
 
 export default class Form extends React.Component {
   state = {
-    firstName: "",
+    tag: "",
     firstNameError: "",
-    lastName: "",
+    name: "",
     lastNameError: "",
-    username: "",
+    occupation: "",
     usernameError: "",
-    email: "",
+    status: "",
     emailError: "",
     password: "",
-    passwordError: ""
+    passwordError: "",
+    information: "", 
+    informationError: ""
   };
 
   change = e => {
@@ -30,18 +32,19 @@ export default class Form extends React.Component {
       lastNameError: "",
       usernameError: "",
       emailError: "",
-      passwordError: ""
+      passwordError: "",
+      informationError: ""
     };
 
-    if (this.state.username.length < 5) {
-      isError = true;
-      errors.usernameError = "Username needs to be atleast 5 characters long";
-    }
+    // if (this.state.username.length < 5) {
+    //   isError = true;
+    //   errors.usernameError = "Username needs to be atleast 5 characters long";
+    // }
 
-    if (this.state.email.indexOf("@") === -1) {
-      isError = true;
-      errors.emailError = "Requires valid email";
-    }
+    // if (this.state.email.indexOf("@") === -1) {
+    //   isError = true;
+    //   errors.emailError = "Requires valid email";
+    // }
 
     this.setState({
       ...this.state,
@@ -58,16 +61,18 @@ export default class Form extends React.Component {
       this.props.onSubmit(this.state);
       // clear form
       this.setState({
-        firstName: "",
+        tag: "",
         firstNameError: "",
-        lastName: "",
+        name: "",
         lastNameError: "",
-        username: "",
+        occupation: "",
         usernameError: "",
-        email: "",
+        status: "",
         emailError: "",
         password: "",
-        passwordError: ""
+        passwordError: "",
+        information: "", 
+        informationError: ""
       });
     }
   };
@@ -76,45 +81,45 @@ export default class Form extends React.Component {
     return (
       <form>
         <TextField
-          name="firstName"
-          hintText="First name"
-          floatingLabelText="First name"
-          value={this.state.firstName}
+          name="tag"
+          hintText="Tag"
+          floatingLabelText="Tag"
+          value={this.state.tag}
           onChange={e => this.change(e)}
           errorText={this.state.firstNameError}
           floatingLabelFixed
         />
-        <br />
+        
         <TextField
-          name="lastName"
-          hintText="Last Name"
-          floatingLabelText="Last Name"
-          value={this.state.lastName}
+          name="name"
+          hintText="Name"
+          floatingLabelText="Name"
+          value={this.state.name}
           onChange={e => this.change(e)}
           errorText={this.state.lastNameError}
           floatingLabelFixed
         />
-        <br />
+        
         <TextField
-          name="username"
-          hintText="Username"
-          floatingLabelText="Username"
-          value={this.state.username}
+          name="occupation"
+          hintText="Occupation"
+          floatingLabelText="Occupation"
+          value={this.state.occupation}
           onChange={e => this.change(e)}
           errorText={this.state.usernameError}
           floatingLabelFixed
         />
-        <br />
+       
         <TextField
-          name="email"
-          hintText="Email"
-          floatingLabelText="Email"
-          value={this.state.email}
+          name="status"
+          hintText="Status"
+          floatingLabelText="Status"
+          value={this.state.status}
           onChange={e => this.change(e)}
           errorText={this.state.emailError}
           floatingLabelFixed
         />
-        <br />
+
         <TextField
           name="password"
           hintText="Password"
@@ -122,10 +127,21 @@ export default class Form extends React.Component {
           value={this.state.password}
           onChange={e => this.change(e)}
           errorText={this.state.passwordError}
-          type="password"
+          //type="password"
           floatingLabelFixed
         />
-        <br />
+       
+        <TextField
+          name="information"
+          hintText="Information"
+          floatingLabelText="Information"
+          value={this.state.information}
+          onChange={e => this.change(e)}
+          errorText={this.state.informationError}
+          //type="password"
+          floatingLabelFixed
+        />
+       
         <RaisedButton label="Submit" onClick={e => this.onSubmit(e)} primary />
       </form>
     );

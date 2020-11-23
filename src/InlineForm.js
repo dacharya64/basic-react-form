@@ -44,15 +44,15 @@ export default class Form extends React.Component {
 
     const { username, email } = this.state.values;
 
-    if (username.length < 5) {
-      isError = true;
-      errors.username = "Username needs to be atleast 5 characters long";
-    }
+    // if (username.length < 5) {
+    //   isError = true;
+    //   errors.username = "Username needs to be atleast 5 characters long";
+    // }
 
-    if (email.indexOf("@") === -1) {
-      isError = true;
-      errors.email = "Requires valid email";
-    }
+    // if (email.indexOf("@") === -1) {
+    //   isError = true;
+    //   errors.email = "Requires valid email";
+    // }
 
     this.setState({
       errors

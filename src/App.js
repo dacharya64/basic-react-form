@@ -21,82 +21,206 @@ const invertDirection = {
 class App extends Component {
   state = {
     data: [
-      {
-        firstName: "Tann",
-        lastName: "Gounin",
-        username: "tgounin0",
-        email: "tgounin0@wordpress.com",
-        passsword: "yJG2MuL5piY"
-      },
-      {
-        firstName: "Elana",
-        lastName: "Ricioppo",
-        username: "ericioppo1",
-        email: "ericioppo1@timesonline.co.uk",
-        passsword: "S7p9ReUoQe"
-      },
-      {
-        firstName: "Bentlee",
-        lastName: "Decourt",
-        username: "bdecourt2",
-        email: "bdecourt2@about.me",
-        passsword: "MWU9hc"
-      },
-      {
-        firstName: "Hyacintha",
-        lastName: "Choudhury",
-        username: "hchoudhury3",
-        email: "hchoudhury3@va.gov",
-        passsword: "kRtWP1"
-      },
-      {
-        firstName: "Ari",
-        lastName: "Spedroni",
-        username: "aspedroni4",
-        email: "aspedroni4@sun.com",
-        passsword: "o78ibUPPmDlZ"
-      },
-      {
-        firstName: "Abelard",
-        lastName: "Rodriguez",
-        username: "arodriguez5",
-        email: "arodriguez5@shutterfly.com",
-        passsword: "g2jd4AwfpA"
-      },
-      {
-        firstName: "Ikey",
-        lastName: "Latek",
-        username: "ilatek6",
-        email: "ilatek6@berkeley.edu",
-        passsword: "GAsgPpKvJx"
-      },
-      {
-        firstName: "Justis",
-        lastName: "Habbeshaw",
-        username: "jhabbeshaw7",
-        email: "jhabbeshaw7@simplemachines.org",
-        passsword: "GN2aQt3ZPq"
-      },
-      {
-        firstName: "Maddie",
-        lastName: "Bayne",
-        username: "mbayne8",
-        email: "mbayne8@constantcontact.com",
-        passsword: "H1GmQcyG6"
-      },
-      {
-        firstName: "Gerrie",
-        lastName: "Rulton",
-        username: "grulton9",
-        email: "grulton9@reverbnation.com",
-        passsword: "tcwp6oONe"
-      }
-    ],
+  {
+    "tag": "ToblinStonehill",
+      "name": "Toblin Stonehill",
+      "occupation": "Innkeeper",
+      "status": "alive",
+      "information": ["RedbrandHangout"]
+    
+  },
+  {
+    "tag": "ElmarBarthen",
+    
+      "name": "Elmar Barthen",
+      "occupation": "Owns trading post",
+      "status": "alive",
+      "information": ["RedbrandShakedown"]
+    
+  },
+  {
+    "tag": "DarenEdermath",
+      "name": "Daren Edermath",
+      "occupation": "Retired adventurer",
+      "faction": "Order of the Gauntlet",
+      "status": "alive",
+      "information": ["RedbrandHideoutLocation", "GetRidOfRedbrands", "DiggingOldOwlWell"]
+    
+  },
+  {
+    "tag": "LineneGraywind",  
+      "name": "Linene Graywind",
+      "occupation": "Runs trading post",
+      "status": "alive",
+      "information": []
+    
+  }, 
+  {
+    "tag": "HaliaThornton",
+      "name": "Halia Thorton",
+      "occupation": "Runs Phandalin Miner's Exchange",
+      "faction": "Zhentarim",
+      "status": "alive",
+      "information": ["GoblinCragmawCastle", "KillRedbrandLeader"]
+    
+  },  
+  {
+    "tag": "QellineAlderleaf",
+      "name": "Qelline Alderleaf",
+      "occupation": "Halfling farmer",
+      "status": "alive",
+      "information": ["ReidothLocation"], 
+      "familyOf": "Mother of Carp",
+      "friendOf": "Reidoth"
+    
+  },  
+  {
+   "tag": "SisterGaraele",
+      "name": "Sister Garaele",
+      "occupation": "Elf cleric of Tymora",
+      "faction": "Harper",
+      "status": "alive",
+      "information": ["AskAgathaAboutBook"]
+    
+  },  
+  {
+   "tag": "HarbinWester",
+    "name": "Harbin Wester",
+    "occupation": "Townmaster of Phandalin",
+    "status": "alive",
+    "information": ["OrcsTriboarTrail", "TownmasterAndRedbrands"]
+    
+  },  
+  {
+   "tag": "SildarHallwinter",
+    "name": "Sildar Hallwinter",
+    "faction": "Lords' Alliance",
+    "status": "alive",
+    "information": ["MissingIarno"]
+    
+  }, 
+  {
+   "tag": "Narth",
+    "name": "Narth",
+    "occupation": "Farmer",
+    "status": "alive",
+    "information": ["SisterGaraeleExhausted"]
+    
+  },
+  {
+   "tag": "TheRedbrands",
+    "name": "The Redbrands",
+    "faction": "Redbrands",
+    "status": "alive",
+    "information": []
+    
+  },
+  {
+   "tag": "Elsa",
+    "name": "Elsa",
+    "status": "alive",
+    "information": []
+    
+  },
+  {
+   "tag": "Lanar",
+    "name": "Lanar",
+    "status": "alive",
+    "information": ["OrcsTriboarTrail"]
+    
+  },
+  {
+   "tag": "Trilena",
+    "name": "Trilena",
+    "status": "alive",
+    "information": ["DendrarFamilyKidnapped"]
+    
+  },
+  {
+   "tag": "Pip",
+    "name": "Pip",
+    "status": "alive",
+    "information": ["SecretTunnelKnowledge"], 
+    "friendOf": "Carp"
+    
+  },
+  {
+   "tag": "Freda",
+    "name": "Freda",
+    "status": "alive",
+    "information": ["RedbrandsAndHalia"]
+    
+  },
+  {
+   "tag": "Ander",
+    "name": "Ander",
+    "status": "alive",
+    "information": []
+    
+  },
+  {
+   "tag": "Thistle",
+    "name": "Thistle",
+    "status": "alive",
+    "information": []
+    
+  },
+  {
+   "tag": "Grista",
+    "name": "Grista",
+    "status": "alive",
+    "information": []
+    
+  },
+  {
+   "tag": "Carp",
+    "name": "Carp",
+    "status": "alive",
+    "information": ["RedbrandHideoutLocation", "SecretTunnelLocation"],
+    "familyOf": "Child of Qelline Alderleaf"
+    
+  },
+  {
+   "tag": "Agatha",
+    "name": "Agatha the Banshee",
+    "status": "alive",
+    "information": ["AgathaInfo"]
+    
+  },
+  {
+   "tag": "Reidoth",
+    "name": "Reidoth",
+    "status": "alive",
+    "information": ["GreenDragon"]
+    
+  },
+  {
+   "tag": "GundrenRockseeker",
+    "name": "Gundren Rockseeker",
+    "status": "alive",
+    "information": ["WaveEchoCaveMap"]
+    
+  },
+  {
+   "tag": "Hamun",
+    "name": "Hamun the Necromancer",
+    "status": "alive",
+    "information": ["HamunQuest", "FinishHamunQuest"]
+    
+  },
+  {
+   "tag": "RedbrandMinions",
+    "name": "Goblin Droop and Bugbears",
+    "status": "alive",
+    "information": ["RedbrandMinionInfo"]
+    
+  }
+],
     editIdx: -1,
     columnToSort: "",
     sortDirection: "desc",
     query: "",
-    columnToQuery: "firstName"
+    columnToQuery: "tag"
   };
 
   handleRemove = i => {
@@ -159,10 +283,11 @@ class App extends Component {
                   this.setState({ columnToQuery: value })
                 }
               >
-                <MenuItem value="firstName" primaryText="First Name" />
-                <MenuItem value="lastName" primaryText="Last Name" />
-                <MenuItem value="username" primaryText="Username" />
-                <MenuItem value="email" primaryText="Email" />
+                <MenuItem value="tag" primaryText="Tag" />
+                <MenuItem value="name" primaryText="Name" />
+                <MenuItem value="occupation" primaryText="Occupation" />
+                <MenuItem value="status" primaryText="Status" />
+                <MenuItem value="information" primaryText="Information" />
               </SelectField>
             </div>
           </div>
@@ -188,20 +313,24 @@ class App extends Component {
             )}
             header={[
               {
-                name: "First name",
-                prop: "firstName"
+                name: "Tag",
+                prop: "tag"
               },
               {
-                name: "Last name",
-                prop: "lastName"
+                name: "Name",
+                prop: "name"
               },
               {
-                name: "Username",
-                prop: "username"
+                name: "Occupation",
+                prop: "occupation"
               },
               {
-                name: "Email",
-                prop: "email"
+                name: "Status",
+                prop: "status"
+              },
+              {
+                name: "Information",
+                prop: "information"
               }
             ]}
           />
