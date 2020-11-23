@@ -11,7 +11,7 @@ import "./App.css";
 import Form from "./Form";
 import Table from "./Table";
 
-injectTapEventPlugin();
+//injectTapEventPlugin();
 
 const invertDirection = {
   asc: "desc",
