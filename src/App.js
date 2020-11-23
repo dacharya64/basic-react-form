@@ -26,7 +26,7 @@ class App extends Component {
       "name": "Toblin Stonehill",
       "occupation": "Innkeeper",
       "status": "alive",
-      "information": ["RedbrandHangout"]
+      "information": "[RedbrandHangout]"
     
   },
   {
@@ -35,7 +35,7 @@ class App extends Component {
       "name": "Elmar Barthen",
       "occupation": "Owns trading post",
       "status": "alive",
-      "information": ["RedbrandShakedown"]
+      "information": "[RedbrandShakedown]"
     
   },
   {
@@ -44,7 +44,7 @@ class App extends Component {
       "occupation": "Retired adventurer",
       "faction": "Order of the Gauntlet",
       "status": "alive",
-      "information": ["RedbrandHideoutLocation", "GetRidOfRedbrands", "DiggingOldOwlWell"]
+      "information": "[RedbrandHideoutLocation, GetRidOfRedbrands, DiggingOldOwlWell]"
     
   },
   {
@@ -61,7 +61,7 @@ class App extends Component {
       "occupation": "Runs Phandalin Miner's Exchange",
       "faction": "Zhentarim",
       "status": "alive",
-      "information": ["GoblinCragmawCastle", "KillRedbrandLeader"]
+      "information": "[GoblinCragmawCastle, KillRedbrandLeader]"
     
   },  
   {
@@ -69,7 +69,7 @@ class App extends Component {
       "name": "Qelline Alderleaf",
       "occupation": "Halfling farmer",
       "status": "alive",
-      "information": ["ReidothLocation"], 
+      "information": "[ReidothLocation]", 
       "familyOf": "Mother of Carp",
       "friendOf": "Reidoth"
     
@@ -80,7 +80,7 @@ class App extends Component {
       "occupation": "Elf cleric of Tymora",
       "faction": "Harper",
       "status": "alive",
-      "information": ["AskAgathaAboutBook"]
+      "information": "[AskAgathaAboutBook]"
     
   },  
   {
@@ -88,7 +88,7 @@ class App extends Component {
     "name": "Harbin Wester",
     "occupation": "Townmaster of Phandalin",
     "status": "alive",
-    "information": ["OrcsTriboarTrail", "TownmasterAndRedbrands"]
+    "information": "[OrcsTriboarTrail, TownmasterAndRedbrands]"
     
   },  
   {
@@ -96,7 +96,7 @@ class App extends Component {
     "name": "Sildar Hallwinter",
     "faction": "Lords' Alliance",
     "status": "alive",
-    "information": ["MissingIarno"]
+    "information": "[MissingIarno]"
     
   }, 
   {
@@ -104,7 +104,7 @@ class App extends Component {
     "name": "Narth",
     "occupation": "Farmer",
     "status": "alive",
-    "information": ["SisterGaraeleExhausted"]
+    "information": "[SisterGaraeleExhausted]"
     
   },
   {
@@ -126,21 +126,21 @@ class App extends Component {
    "tag": "Lanar",
     "name": "Lanar",
     "status": "alive",
-    "information": ["OrcsTriboarTrail"]
+    "information": "[OrcsTriboarTrail]"
     
   },
   {
    "tag": "Trilena",
     "name": "Trilena",
     "status": "alive",
-    "information": ["DendrarFamilyKidnapped"]
+    "information": "[DendrarFamilyKidnapped]"
     
   },
   {
    "tag": "Pip",
     "name": "Pip",
     "status": "alive",
-    "information": ["SecretTunnelKnowledge"], 
+    "information": "[SecretTunnelKnowledge]", 
     "friendOf": "Carp"
     
   },
@@ -148,7 +148,7 @@ class App extends Component {
    "tag": "Freda",
     "name": "Freda",
     "status": "alive",
-    "information": ["RedbrandsAndHalia"]
+    "information": "[RedbrandsAndHalia]"
     
   },
   {
@@ -176,7 +176,7 @@ class App extends Component {
    "tag": "Carp",
     "name": "Carp",
     "status": "alive",
-    "information": ["RedbrandHideoutLocation", "SecretTunnelLocation"],
+    "information": "[RedbrandHideoutLocation, SecretTunnelLocation]",
     "familyOf": "Child of Qelline Alderleaf"
     
   },
@@ -184,35 +184,35 @@ class App extends Component {
    "tag": "Agatha",
     "name": "Agatha the Banshee",
     "status": "alive",
-    "information": ["AgathaInfo"]
+    "information": "[AgathaInfo]"
     
   },
   {
    "tag": "Reidoth",
     "name": "Reidoth",
     "status": "alive",
-    "information": ["GreenDragon"]
+    "information": "[GreenDragon]"
     
   },
   {
    "tag": "GundrenRockseeker",
     "name": "Gundren Rockseeker",
     "status": "alive",
-    "information": ["WaveEchoCaveMap"]
+    "information": "[WaveEchoCaveMap]"
     
   },
   {
    "tag": "Hamun",
     "name": "Hamun the Necromancer",
     "status": "alive",
-    "information": ["HamunQuest", "FinishHamunQuest"]
+    "information": "[HamunQuest, FinishHamunQuest]"
     
   },
   {
    "tag": "RedbrandMinions",
     "name": "Goblin Droop and Bugbears",
     "status": "alive",
-    "information": ["RedbrandMinionInfo"]
+    "information": "[RedbrandMinionInfo]"
     
   }
 ],
@@ -255,7 +255,7 @@ class App extends Component {
   };
 
   render() {
-    const lowerCaseQuery = this.state.query.toLowerCase();
+    const lowerCaseQuery = this.state.query.toString().toLowerCase();
     return (
       <MuiThemeProvider>
         <div className="App">
@@ -304,6 +304,7 @@ class App extends Component {
               this.state.query
                 ? this.state.data.filter(x =>
                     x[this.state.columnToQuery]
+                      .toString()
                       .toLowerCase()
                       .includes(lowerCaseQuery)
                   )
